@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Korean Chicken Franchise Comparison Guide</title>
+<style>
+:root{--ink:#182230;--muted:#526174;--accent:#b84425;--paper:#fffaf5;--line:#eadfd5;--card:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{background:#202a35;color:white;padding:clamp(28px,6vw,64px) max(20px,calc((100% - 1050px)/2))}
+header p{max-width:720px;color:#e7edf3}main{max-width:1050px;margin:auto;padding:24px 18px 56px}
+h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:0 0 14px}h2{margin-top:34px;font-size:1.5rem}h3{margin-bottom:6px}
+.kicker{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800;color:#ffd0b9}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.card p{margin:.35rem 0;color:var(--muted)}.metric{font-size:1.6rem;font-weight:800;color:var(--accent)}
+.note{border-left:4px solid var(--accent);padding:12px 16px;background:#fff0e7;border-radius:0 10px 10px 0}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:white}table{border-collapse:collapse;width:100%;min-width:650px}th,td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#f5e9df}tr:last-child td{border-bottom:0}
+button{border:0;border-radius:10px;padding:11px 15px;margin:4px 6px 12px 0;background:#202a35;color:white;font-weight:700;cursor:pointer}button:hover,button:focus{background:var(--accent)}button:focus-visible,a:focus-visible{outline:3px solid #e7a58c;outline-offset:3px}
+small,.muted{color:var(--muted)}a{color:#92351e;overflow-wrap:anywhere}.query{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;background:#f2e8df;padding:3px 6px;border-radius:5px;overflow-wrap:anywhere}
+footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.92rem}
+@media(max-width:700px){.grid{grid-template-columns:1fr}header{padding:32px 20px}main{padding:18px 14px 40px}h2{font-size:1.3rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Student research project · Korea</div>
+  <h1>Guide to Comparing Domestic Franchises</h1>
+  <p>A simple comparison of three Korean fried-chicken franchise brands using one shared measure: the number of franchise stores reported for the 2022 base year.</p>
+  <p lang="ko">한국 국내 프랜차이즈 비교 가이드입니다. 동일한 기준인 2022년 말 가맹점 수로 국내 치킨 브랜드 세 곳을 비교합니다.</p>
+</header>
+<main>
+<section>
+<h2>1. Brands and comparison criteria</h2>
+<div class="grid">
+<article class="card"><h3>BBQ</h3><p>A Korean fried-chicken franchise known for its fried chicken menu, including Golden Olive.</p><p lang="ko">황금올리브 등 후라이드 치킨 메뉴로 알려진 국내 치킨 프랜차이즈입니다.</p><p class="metric">2,111 stores</p><small>Reported base year: 2022</small></article>
+<article class="card"><h3>bhc Chicken</h3><p>A Korean chicken franchise with menu items such as Bburinkle and other seasoned chicken options.</p><p lang="ko">뿌링클 등 다양한 시즈닝 치킨 메뉴로 알려진 국내 치킨 프랜차이즈입니다.</p><p class="metric">1,991 stores</p><small>Reported base year: 2022</small></article>
+<article class="card"><h3>Kyochon Chicken</h3><p>A Korean chicken franchise known for soy-garlic, honey, and red-seasoned chicken.</p><p lang="ko">간장, 허니, 레드 시리즈 치킨으로 알려진 국내 치킨 프랜차이즈입니다.</p><p class="metric">1,365 stores</p><small>Reported base year: 2022</small></article>
+</div>
+<p class="note"><strong>Method / 기준:</strong> Store count (number of franchise stores), base year 2022. These figures are reported as year-end franchise-store counts based on franchise disclosure information. They are not corporate revenue or average franchisee revenue. The brand figures were reported by news coverage of the disclosure data; the official Fair Trade Commission release explains that its 2024 franchise-status report uses 2022 year-end store-count data. Check the original disclosure records before using the numbers for business decisions.</p>
+</section>
+<section>
+<h2>2. Comparison table / 비교표</h2>
+<p>Sort only the numerical store-count column. The source year and metric are the same for all three entries.</p>
+<p lang="ko">숫자로 표시된 가맹점 수를 기준으로 정렬할 수 있습니다. 세 브랜드의 기준 연도와 지표는 같습니다.</p>
+<button id="desc" type="button">Highest to Lowest</button><button id="asc" type="button">Lowest to Highest</button>
+<div class="table-wrap"><table id="brands"><thead><tr><th>Brand / 브랜드</th><th>Franchise stores / 가맹점 수</th><th>Base year / 기준 연도</th><th>Source</th></tr></thead><tbody>
+<tr data-stores="2111"><td>BBQ</td><td>2,111 stores</td><td>2022 year-end</td><td><a href="https://mobile.newsis.com/view.html?ar_id=NISX20240409_0002693689" target="_blank" rel="noopener">Newsis report</a></td></tr>
+<tr data-stores="1991"><td>bhc Chicken</td><td>1,991 stores</td><td>2022 year-end</td><td><a href="https://mobile.newsis.com/view.html?ar_id=NISX20240409_0002693689" target="_blank" rel="noopener">Newsis report</a></td></tr>
+<tr data-stores="1365"><td>Kyochon Chicken</td><td>1,365 stores</td><td>2022 year-end</td><td><a href="https://mobile.newsis.com/view.html?ar_id=NISX20240409_0002693689" target="_blank" rel="noopener">Newsis report</a></td></tr>
+</tbody></table></div>
+</section>
+<section>
+<h2>3. Search history / 검색 기록</h2>
+<p>These four query formats are designed to show how the search method changes the type of evidence found. The notes below describe the observed/expected distinction between source types; search result ordering can vary by date and user.</p>
+<ol>
+<li><span class="query">Domestic franchise revenue rankings</span><br><strong>English:</strong> Broad results may mix corporate revenue, franchise-store counts, and average sales per store. Check the metric before comparing.<br><span lang="ko">넓은 검색어는 본사 매출, 가맹점 수, 점포당 평균 매출을 함께 보여줄 수 있으므로 지표를 확인해야 합니다.</span></li>
+<li><span class="query">Domestic franchise revenue rankings filetype:pdf</span><br><strong>English:</strong> PDF reports and official press releases are easier to locate, but their publication year may differ from the data year.<br><span lang="ko">PDF 보고서와 공식 보도자료를 찾기 쉽지만, 게시 연도와 통계 기준 연도가 다를 수 있습니다.</span></li>
+<li><span class="query">Domestic franchise revenue rankings site:naver.com</span><br><strong>English:</strong> Naver-hosted pages may emphasize news articles and summaries. Follow the article's links to check original disclosures.<br><span lang="ko">네이버 검색에서는 뉴스와 요약 자료가 눈에 띌 수 있으므로 원문 공시 링크를 따라가 확인합니다.</span></li>
+<li><span class="query">Domestic franchise revenue rankings after:2024-06-01 before:2026-01-01</span><br><strong>English:</strong> This date filter limits publication dates, not the base year of the figures. A newer article may still discuss older data.<br><span lang="ko">날짜 필터는 게시일을 제한할 뿐 통계 기준 연도를 보장하지 않습니다. 최신 기사도 이전 연도 자료를 다룰 수 있습니다.</span></li>
+</ol>
+</section>
+<section>
+<h2>4. Sources / 출처</h2>
+<ul>
+<li><a href="https://www.ftc.go.kr/www/selectBbsNttView.do?bordCd=3&key=12&nttSn=43351&pageIndex=3&pageUnit=10&rltnNttSn=41019&searchCnd=all&searchViolt=13" target="_blank" rel="noopener">Korea Fair Trade Commission (FTC): 2023 franchise business statistics announcement</a> — official explanation that store counts refer to year-end 2022 data.</li>
+<li><a href="https://mobile.newsis.com/view.html?ar_id=NISX20240409_0002693689" target="_blank" rel="noopener">Newsis: Franchise store counts and average franchise sales</a> — reports BBQ 2,111, bhc 1,991, and Kyochon 1,365 stores using franchise disclosure information.</li>
+<li><a href="https://kyochon.com/" target="_blank" rel="noopener">Kyochon official website</a> — brand and menu information; current store finder may change over time.</li>
+<li><a href="https://bhcchicken.global/" target="_blank" rel="noopener">bhc official global website</a> — brand information and a current store-count claim; this is not used as the 2022 comparison figure.</li>
+<li><a href="https://www.genesisbbq.co.kr/" target="_blank" rel="noopener">BBQ official website</a> — brand information.</li>
+</ul>
+<p class="note"><strong>Data caution / 자료 주의:</strong> The comparison values are attributed to franchise disclosure data as reported in the cited news article, not independently re-extracted from each brand's full disclosure document in this page. Treat them as a classroom comparison and verify the individual disclosure records for formal use. Do not compare them with current live store counts or company-wide revenue.</p>
+</section>
+<footer>
+<p><strong>Project creator / 제작자:</strong> Student project (add your preferred name before submission if required).</p>
+<p><strong>Tools / 도구:</strong> ChatGPT for drafting and page code; browser search for source checking; HTML, CSS, and JavaScript in one file. This page uses no external APIs.</p>
+<p>Last reviewed: October 2026. Search results and live brand websites may change.</p>
+</footer>
+</main>
+<script>
+(function(){
+ const tbody=document.querySelector('#brands tbody');
+ function sortRows(direction){
+   const rows=Array.from(tbody.querySelectorAll('tr'));
+   const values=rows.map(row=>({row,value:Number(row.dataset.stores)}));
+   if(values.some(item=>!Number.isFinite(item.value))) return;
+   values.sort((a,b)=>direction==='asc'?a.value-b.value:b.value-a.value);
+   values.forEach(item=>tbody.appendChild(item.row));
+ }
+ document.getElementById('desc').addEventListener('click',()=>sortRows('desc'));
+ document.getElementById('asc').addEventListener('click',()=>sortRows('asc'));
+})();
+</script>
+</body>
+</html>
